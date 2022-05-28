@@ -8155,6 +8155,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8180,7 +8181,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.29036132, g: 0.4245283, b: 0.3062099, a: 0}
+  m_BackGroundColor: {r: 0.20340407, g: 0.3773585, b: 0.16909933, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -8197,8 +8198,8 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
-  m_Depth: -1
+  orthographic size: 10
+  m_Depth: 20
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -8221,13 +8222,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -17.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9457c19f10ea425096b1acb950b7a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 1528703062}
 --- !u!1 &526992833
 GameObject:
   m_ObjectHideFlags: 0
@@ -26567,6 +26581,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1528703062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6847300564396048504, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
+  m_PrefabInstance: {fileID: 6847300564072229305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1544070577
 GameObject:
   m_ObjectHideFlags: 0
@@ -38931,12 +38950,8 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048509, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
-      propertyPath: moveSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6847300564396048509, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: steerSpeed
-      value: 200
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
