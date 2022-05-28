@@ -11,9 +11,19 @@ public class Driver : MonoBehaviour
     [SerializeField] private float slowSpeed;
     [SerializeField] private float highSpeed;
     [SerializeField] private float normalSpeed;
+    
+    // Delivery
+    [SerializeField] private Color32 hasPackageColor = new Color32(1, 1, 1, 1);
+    [SerializeField] private Color32 noPackageColor = new Color32(1, 1, 1, 1);
 
+    private SpriteRenderer _sp;
+    private bool hasPackage = false;
+    
+    
+    // Main Methods
     void Start()
     {
+        _sp = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -21,7 +31,7 @@ public class Driver : MonoBehaviour
         PlayerMove();
     }
 
-
+    // User Methods
     void PlayerMove()
     {
         var steerAmount = Input.GetAxis("Horizontal") * steerSpeed * Time.deltaTime;
@@ -30,33 +40,42 @@ public class Driver : MonoBehaviour
         transform.Translate(0f, moveAmount, 0f);
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collidedObject)
     {
-        if (CompareTag("Gasoline"))
+        if (collidedObject.CompareTag("Package") && !hasPackage)
+        {
+            Debug.Log("Package Pickup");
+            Destroy(collidedObject, 1f);
+            hasPackage = true;
+            _sp.color = hasPackageColor;
+
+            // Speed Change
+            moveSpeed = slowSpeed;
+        }
+        else if (collidedObject.CompareTag("Customer") && hasPackage)
+        {
+            Debug.Log("Package Delivered");
+            _sp.color = noPackageColor;
+            hasPackage = false;
+
+            // Speed Change
+            moveSpeed = normalSpeed;
+        }
+        else if (CompareTag("Gasoline"))
         {
             Debug.Log("Gasoline Restored");
+            Destroy(collidedObject, 0.5f);
+
+            // Speed Change
             moveSpeed = highSpeed;
-            Destroy(col, 0.5f);
         }
     }
 
+
     private void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log("Objects have collided");
         Debug.Log("Gasoline Wasted !!!!");
         moveSpeed = normalSpeed;
     }
-
-    void PlayerSlow()
-    {
-        
-    }
-
 } // Class
-
-
-
-
-
-
-
-

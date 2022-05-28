@@ -42055,6 +42055,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1528703068, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528703068, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: hasPackageColor.rgba
       value: 4294935039
       objectReference: {fileID: 0}
@@ -42121,6 +42125,18 @@ PrefabInstance:
     - target: {fileID: 6847300564396048509, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: normalSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847300564396048509, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
+      propertyPath: packagePrefab
+      value: 
+      objectReference: {fileID: 7897953701461536315, guid: 4a949ab457ae9428d81639d971e17461, type: 3}
+    - target: {fileID: 6847300564396048509, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
+      propertyPath: noPackageColor.rgba
+      value: 4294936306
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847300564396048509, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
+      propertyPath: hasPackageColor.rgba
+      value: 4281451519
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
