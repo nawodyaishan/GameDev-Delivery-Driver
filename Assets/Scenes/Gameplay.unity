@@ -8222,7 +8222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -17.2}
+  m_LocalPosition: {x: 6.56, y: -2.65, z: -17.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38911,11 +38911,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.53
+      value: 6.65
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.76
+      value: -2.64
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38923,19 +38923,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: -0.9999403
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: 0.010928796
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38947,7 +38947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048506, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: -1.252
       objectReference: {fileID: 0}
     - target: {fileID: 6847300564396048509, guid: 84bb4f91af48842c0aa6fe3894353dd6, type: 3}
       propertyPath: steerSpeed
