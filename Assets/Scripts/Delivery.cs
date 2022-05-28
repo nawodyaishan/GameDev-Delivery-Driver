@@ -7,11 +7,12 @@ using UnityEngine;
 
 public class Delivery : MonoBehaviour
 {
-    [SerializeField] private Color32 hasNewColor = new Color32(1, 1, 1, 1);
-    [SerializeField] private Color32 noNewColor = new Color32(1, 1, 1, 0);
-    
-    [SerializeField] private bool hasPackage = false;
+    [SerializeField] private Color32 hasPackageColor = new Color32(1, 1, 1, 1);
+    [SerializeField] private Color32 noPackageColor = new Color32(1, 1, 1, 1);
 
+    private SpriteRenderer _sp;
+
+    [SerializeField] private bool hasPackage = false;
     [SerializeField] private GameObject packagePrefab;
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -34,5 +35,10 @@ public class Delivery : MonoBehaviour
             hasPackage = false;
             //collidedObject.GetComponent<Transform>().position
         }
+    }
+
+    private void Start()
+    {
+        _sp = GetComponent<SpriteRenderer>();
     }
 }
