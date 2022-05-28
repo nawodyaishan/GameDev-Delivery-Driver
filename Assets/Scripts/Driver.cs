@@ -12,10 +12,6 @@ public class Driver : MonoBehaviour
     [SerializeField] private float highSpeed;
     [SerializeField] private float normalSpeed;
 
-    void Start()
-    {
-    }
-
     private void Update()
     {
         PlayerMove();
@@ -38,25 +34,10 @@ public class Driver : MonoBehaviour
             moveSpeed = highSpeed;
             Destroy(col, 0.5f);
         }
+        else if (CompareTag("Environment"))
+        {
+            Debug.Log("Gasoline Wasted !!!!");
+            moveSpeed = normalSpeed;
+        }
     }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        Debug.Log("Gasoline Wasted !!!!");
-        moveSpeed = normalSpeed;
-    }
-
-    void PlayerSlow()
-    {
-        
-    }
-
 } // Class
-
-
-
-
-
-
-
-

@@ -41883,6 +41883,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2350181624012632016, guid: 65e66fb83079342b7a6acb238f9d03a4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3464467921841424390, guid: 65e66fb83079342b7a6acb238f9d03a4, type: 3}
       propertyPath: m_Name
       value: Gasoline
