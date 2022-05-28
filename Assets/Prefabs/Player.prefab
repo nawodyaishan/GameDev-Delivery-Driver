@@ -151,5 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613ab46d4900d4d14969c305525da051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasNewColor:
+    serializedVersion: 2
+    rgba: 16843009
+  noNewColor:
+    serializedVersion: 2
+    rgba: 16843009
   hasPackage: 0
   packagePrefab: {fileID: 7897953701461536315, guid: 4a949ab457ae9428d81639d971e17461, type: 3}

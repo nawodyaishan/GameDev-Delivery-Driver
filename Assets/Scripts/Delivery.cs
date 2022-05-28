@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class Delivery : MonoBehaviour
 {
+    [SerializeField] private Color32 hasNewColor = new Color32(1, 1, 1, 1);
+    [SerializeField] private Color32 noNewColor = new Color32(1, 1, 1, 0);
+    
     [SerializeField] private bool hasPackage = false;
 
     [SerializeField] private GameObject packagePrefab;
@@ -29,7 +32,7 @@ public class Delivery : MonoBehaviour
             Debug.Log("Package Delivered");
             // Destroy(collidedObject.GameObject(), 2f);
             hasPackage = false;
-            collidedObject.GetComponent<Transform>().position
+            //collidedObject.GetComponent<Transform>().position
         }
     }
 }
