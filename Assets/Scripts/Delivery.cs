@@ -7,6 +7,10 @@ using UnityEngine;
 
 public class Delivery : MonoBehaviour
 {
+    [SerializeField] private bool hasPackage = false;
+
+    [SerializeField] private GameObject packagePrefab;
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("Objects have collided");
@@ -18,6 +22,12 @@ public class Delivery : MonoBehaviour
         {
             Debug.Log("Package Acquired");
             Destroy(collidedObject.GameObject(), 1f);
+        }
+        else if (collidedObject.CompareTag("Customer"))
+        {
+            Debug.Log("Package Acquired");
+            Instantiate(packagePrefab, collidedObject.transform.position + new Vector3(1, 1, 1), Quaternion.identity);
+            Destroy(collidedObject.GameObject(), 2f);
         }
     }
 }
