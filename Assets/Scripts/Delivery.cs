@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Delivery : MonoBehaviour
@@ -10,8 +12,12 @@ public class Delivery : MonoBehaviour
         Debug.Log("Objects have collided");
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collidedObject)
     {
-        Debug.Log("You Went Through me");
+        if (collidedObject.CompareTag("Package"))
+        {
+            Debug.Log("Package Acquired");
+            Destroy(collidedObject.GameObject(), 1f);
+        }
     }
 }
