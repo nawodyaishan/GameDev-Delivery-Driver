@@ -18,16 +18,18 @@ public class Delivery : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collidedObject)
     {
-        if (collidedObject.CompareTag("Package"))
+        if (collidedObject.CompareTag("Package") && !hasPackage)
         {
-            Debug.Log("Package Acquired");
+            Debug.Log("Package Pickup");
             Destroy(collidedObject.GameObject(), 1f);
+            hasPackage = true;
         }
-        else if (collidedObject.CompareTag("Customer"))
+        else if (collidedObject.CompareTag("Customer") && hasPackage)
         {
-            Debug.Log("Package Acquired");
-            Instantiate(packagePrefab, collidedObject.transform.position + new Vector3(1, 1, 1), Quaternion.identity);
-            Destroy(collidedObject.GameObject(), 2f);
+            Debug.Log("Package Delivered");
+            // Destroy(collidedObject.GameObject(), 2f);
+            hasPackage = false;
+            collidedObject.GetComponent<Transform>().position
         }
     }
 }
