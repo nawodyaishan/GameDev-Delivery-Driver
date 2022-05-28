@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 817686141fd324e21b6b00fa71c72a1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 727388ea6fea942979c4d667ffc01f9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -153,8 +153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasPackageColor:
     serializedVersion: 2
-    rgba: 4294961510
+    rgba: 4283760895
   noPackageColor:
     serializedVersion: 2
-    rgba: 4278253055
+    rgba: 4278244095
   packagePrefab: {fileID: 7897953701461536315, guid: 4a949ab457ae9428d81639d971e17461, type: 3}
