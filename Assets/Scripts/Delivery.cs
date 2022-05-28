@@ -15,6 +15,12 @@ public class Delivery : MonoBehaviour
 
     [SerializeField] private GameObject packagePrefab;
 
+
+    private void Start()
+    {
+        _sp = GetComponent<SpriteRenderer>();
+    }
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("Objects have collided");
@@ -28,8 +34,6 @@ public class Delivery : MonoBehaviour
             Destroy(collidedObject.GameObject(), 1f);
             hasPackage = true;
             _sp.color = hasPackageColor;
-            
-            
         }
         else if (collidedObject.CompareTag("Customer") && hasPackage)
         {
@@ -40,10 +44,5 @@ public class Delivery : MonoBehaviour
             // Destroy(collidedObject.GameObject(), 2f);
             //collidedObject.GetComponent<Transform>().position
         }
-    }
-
-    private void Start()
-    {
-        _sp = GetComponent<SpriteRenderer>();
     }
 }

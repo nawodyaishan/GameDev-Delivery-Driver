@@ -33,11 +33,28 @@ public class Driver : MonoBehaviour
             Debug.Log("Gasoline Restored");
             moveSpeed = highSpeed;
             Destroy(col, 0.5f);
+            Debug.Log("Gasoline Wasted !!!!");
         }
-        else if (CompareTag("Environment"))
+
+        else if (CompareTag("Package"))
+        {
+            moveSpeed = slowSpeed;
+            Debug.Log("Slow Speed !!!!");
+        }
+        else if (CompareTag("Customer"))
+        {
+            moveSpeed = normalSpeed;
+            Debug.Log("High Speed !!!!");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (CompareTag("Environment"))
         {
             Debug.Log("Gasoline Wasted !!!!");
             moveSpeed = normalSpeed;
+            Debug.Log("Normal Speed !!!!");
         }
     }
 } // Class
