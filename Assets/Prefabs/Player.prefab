@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1528703068}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41ba18ad3a3d4df296e4a74657ec7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steerSpeed: 100
+  steerSpeed: 120
   moveSpeed: 7
 --- !u!50 &1528703066
 Rigidbody2D:
