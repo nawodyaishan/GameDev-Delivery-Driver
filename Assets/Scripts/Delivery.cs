@@ -12,7 +12,7 @@ public class Delivery : MonoBehaviour
 
     private SpriteRenderer _sp;
     private bool hasPackage = false;
-    
+
     [SerializeField] private GameObject packagePrefab;
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -28,6 +28,8 @@ public class Delivery : MonoBehaviour
             Destroy(collidedObject.GameObject(), 1f);
             hasPackage = true;
             _sp.color = hasPackageColor;
+            
+            
         }
         else if (collidedObject.CompareTag("Customer") && hasPackage)
         {
