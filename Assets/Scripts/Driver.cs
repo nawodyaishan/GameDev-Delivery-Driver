@@ -12,6 +12,8 @@ public class Driver : MonoBehaviour
     [SerializeField] private float highSpeed;
     [SerializeField] private float normalSpeed;
 
+    private bool hasGasoline = false;
+
     private void Update()
     {
         PlayerMove();
@@ -28,33 +30,35 @@ public class Driver : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (CompareTag("Gasoline"))
+        if (col.CompareTag("Gasoline") && !hasGasoline)
         {
             Debug.Log("Gasoline Restored");
             moveSpeed = highSpeed;
-            Destroy(col, 0.5f);
-            Debug.Log("Gasoline Wasted !!!!");
+            Destroy(col.gameObject, 0.5f);
+            hasGasoline = true;
         }
 
-        else if (CompareTag("Package"))
+        else if (col.CompareTag("Package") && !hasGasoline)
         {
             moveSpeed = slowSpeed;
             Debug.Log("Slow Speed !!!!");
         }
-        else if (CompareTag("Customer"))
+        else if (col.CompareTag("Customer") && !hasGasoline)
         {
             moveSpeed = normalSpeed;
-            Debug.Log("High Speed !!!!");
+            Debug.Log("Normal Speed !!!!");
         }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (CompareTag("Environment"))
+        if (col.gameObject.CompareTag("Environment") && hasGasoline)
         {
-            Debug.Log("Gasoline Wasted !!!!");
+            Debug.Log("Gasoline Wasted by Environment !!!!");
             moveSpeed = normalSpeed;
-            Debug.Log("Normal Speed !!!!");
+            Debug.Log("Normal Speed - Environment !!!!");
+            Debug.Log("Objects have collided");
+            hasGasoline = false;
         }
     }
 } // Class
