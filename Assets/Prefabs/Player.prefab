@@ -101,7 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steerSpeed: 120
-  moveSpeed: 7
+  moveSpeed: 8
+  slowSpeed: 6
+  highSpeed: 10
+  normalSpeed: 8
 --- !u!50 &1528703066
 Rigidbody2D:
   serializedVersion: 4
@@ -153,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasPackageColor:
     serializedVersion: 2
-    rgba: 4283760895
+    rgba: 4294935039
   noPackageColor:
     serializedVersion: 2
     rgba: 4278244095
