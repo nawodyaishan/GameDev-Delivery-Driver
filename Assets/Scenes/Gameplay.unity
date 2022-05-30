@@ -9484,7 +9484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9457c19f10ea425096b1acb950b7a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1528703062}
+  thingToFollow: {fileID: 1528703062}
 --- !u!4 &525700925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7897953701461536312, guid: 4a949ab457ae9428d81639d971e17461, type: 3}
